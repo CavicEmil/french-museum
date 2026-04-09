@@ -36,5 +36,4 @@ export default function Hero() {
         </ul>
         </div>
     );
-
 }
