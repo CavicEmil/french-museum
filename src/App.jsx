@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
 import Landing from './views/Landing';
-import MyPlants from './views/Exhibitions';
+import Exhibitions from './views/Exhibitions';
 import './App.css';
 
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
       {
-        path: '/myplants',
+        path: '/exhibits',
         element: <Exhibitions />,
       }
     ],

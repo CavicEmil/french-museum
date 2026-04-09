@@ -1,7 +1,12 @@
+import Hero from '../components/Hero';
+
 export default function Landing() {
     return (
-        <h1>
-            BONJOUR
-        </h1>
+        <div>
+            <h1>
+                BONJOUR
+            </h1>
+            <Hero />
+        </div>
     )
 }
