@@ -24,7 +24,7 @@ export default function Header() {
 
             {/* TITLE */}
             <h1
-                className="mt-10 leading-[0.85] text-black"
+                className="mt-10 w-full text-center leading-[0.85] text-black"
                 style={{
                     fontSize: "var(--font-size-header)",
                     fontWeight: "var(--font-weight-bold)"
