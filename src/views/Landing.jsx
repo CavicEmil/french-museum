@@ -15,7 +15,7 @@ export default function Landing() {
             </div>
 
             <div className="mt-auto flex flex-col items-center justify-center gap-6 pb-6 pt-20 text-center lg:pt-28">
-                <div className="grid grid-cols-2 gap-x-20 gap-y-1 text-[clamp(1.25rem,3vw,3.125rem)] font-[var(--font-weight-accent)] italic leading-[1.05] text-black">
+                <div className="grid grid-cols-2 gap-x-20 gap-y-1 text-[clamp(2rem,3vw,2rem)] font-[var(--font-weight-accent)] italic leading-[1.05] text-black">
                     <p>Tirsdag 11-18</p>
                     <p>Fredag 11-18</p>
                     <p>Onsdag 11-18</p>
