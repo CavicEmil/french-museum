@@ -35,7 +35,7 @@ export default function Header() {
 
             {/* DESCRIPTION (RIGHT SIDE) */}
             <p
-                className="max-w-md ml-auto mt-20 text-black"
+                className="max-w-md ml-auto mt-20 mb-8 text-black"
                 style={{
                     fontSize: "var(--font-size-body)",
                     fontWeight: "var(--font-weight-regular)"
@@ -48,7 +48,7 @@ export default function Header() {
 
             {/* SIDE DRAWER */}
             <div
-                className={`fixed top-0 left-0 h-full w-[320px] bg-[#f2f2f2] z-50
+                className={`fixed top-0 left-0 h-full w-[320px] bg-[#f2f2f2] z-50 text-black
                 transform transition-transform duration-300 ease-[cubic-bezier(0.77,0,0.18,1)]
                 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
