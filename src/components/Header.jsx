@@ -24,7 +24,7 @@ export default function Header() {
 
             {/* TITLE */}
             <h1
-                className="mt-10 leading-[0.85]"
+                className="mt-10 w-full text-center leading-[0.85] text-black"
                 style={{
                     fontSize: "var(--font-size-header)",
                     fontWeight: "var(--font-weight-bold)"
@@ -35,11 +35,10 @@ export default function Header() {
 
             {/* DESCRIPTION (RIGHT SIDE) */}
             <p
-                className="max-w-md ml-auto mt-20"
+                className="mt-20 text-black lg:ml-auto lg:mr-0 lg:w-[48%] lg:max-w-none lg:text-right"
                 style={{
                     fontSize: "var(--font-size-body)",
-                    fontWeight: "var(--font-weight-regular)",
-                    color: "var(--color-primary-grey)"
+                    fontWeight: "var(--font-weight-regular)"
                 }}
             >
                 Kunsthal Aarhus is an inclusive exhibition space that aims to
