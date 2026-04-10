@@ -1,37 +1,96 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // Lock scroll when menu is open
+    useEffect(() => {
+        document.body.style.overflow = menuOpen ? "hidden" : "auto";
+    }, [menuOpen]);
+
     return (
-        <header>
-            <h1>Bonjour this is header</h1>
-            <button onClick={() => setMenuOpen(true)} aria-label="Open menu">
-                &#9776; {/* burger icon */}
+        <header className="min-h-screen bg-white p-8 font-sans relative overflow-hidden">
+
+            {/* BURGER */}
+            <button
+                onClick={() => setMenuOpen(true)}
+                aria-label="Open menu"
+                className="flex flex-col gap-1.5"
+            >
+                <span className="w-7 h-[2px] bg-black"></span>
+                <span className="w-7 h-[2px] bg-black"></span>
+                <span className="w-7 h-[2px] bg-black"></span>
             </button>
-            {menuOpen && (
-                <div style={{
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100vw",
-                    height: "100vh",
-                    background: "rgba(0,0,0,0.7)",
-                    zIndex: 1000,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center"
-                }}>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Exhibitions</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+
+            {/* TITLE */}
+            <h1
+                className="mt-10 leading-[0.85]"
+                style={{
+                    fontSize: "var(--font-size-header)",
+                    fontWeight: "var(--font-weight-bold)"
+                }}
+            >
+                kunsthalaarhus
+            </h1>
+
+            {/* DESCRIPTION (RIGHT SIDE) */}
+            <p
+                className="max-w-md ml-auto mt-20"
+                style={{
+                    fontSize: "var(--font-size-body)",
+                    fontWeight: "var(--font-weight-regular)",
+                    color: "var(--color-primary-grey)"
+                }}
+            >
+                Kunsthal Aarhus is an inclusive exhibition space that aims to
+                communicate clearly, enthusiastically, and engagingly to a broad
+                audience, sparking curiosity about contemporary art.
+            </p>
+
+            {/* SIDE DRAWER */}
+            <div
+                className={`fixed top-0 left-0 h-full w-[320px] bg-[#f2f2f2] z-50
+                transform transition-transform duration-300 ease-[cubic-bezier(0.77,0,0.18,1)]
+                ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
+            >
+
+                {/* Soft blurred edge */}
+                <div className="absolute right-0 top-0 h-full w-12 pointer-events-none
+                                bg-gradient-to-r from-transparent to-black/20 blur-lg"></div>
+
+                <div className="p-8 flex flex-col h-full">
+
+
+
+                    {/* NAV */}
+                    <nav className="flex flex-col gap-8"
+                        style={{ fontSize: "var(--font-size-body)" }}
+                    >
+                        <a href="#">Lorem</a>
+                        <a href="#">ipsum</a>
+                        <a href="#">venenatis</a>
+                        <a href="#">donec nunc</a>
                     </nav>
-                    <button onClick={() => setMenuOpen(false)} aria-label="Close menu">Close</button>
+
+                    {/* FOOTER TEXT */}
+                    <div
+                        className="mt-auto"
+                        style={{
+                            fontSize: "var(--font-size-body)",
+                            fontWeight: "var(--font-weight-regular)"
+                        }}
+                    >
+                        Nu: Lukket
+                    </div>
                 </div>
+            </div>
+
+            {/* BACKDROP (click outside to close) */}
+            {menuOpen && (
+                <div
+                    className="fixed inset-0 bg-black/10 z-40"
+                    onClick={() => setMenuOpen(false)}
+                />
             )}
         </header>
     );
