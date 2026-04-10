@@ -65,10 +65,10 @@ export default function Header() {
                     <nav className="flex flex-col gap-8"
                         style={{ fontSize: "var(--font-size-body)" }}
                     >
-                        <a href="#">Lorem</a>
-                        <a href="#">ipsum</a>
-                        <a href="#">venenatis</a>
-                        <a href="#">donec nunc</a>
+                        <a href="#">Home</a>
+                        <a href="#">Exhibitions</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
                     </nav>
 
                     {/* FOOTER TEXT */}
