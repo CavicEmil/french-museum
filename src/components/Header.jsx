@@ -9,7 +9,7 @@ export default function Header() {
     }, [menuOpen]);
 
     return (
-        <header className="min-h-screen bg-white p-8 font-sans relative overflow-hidden">
+        <header className="bg-white p-8 font-sans relative overflow-hidden">
 
             {/* BURGER */}
             <button
