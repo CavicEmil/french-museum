@@ -3,19 +3,17 @@
 
 /* ADJUST HERE FOR DESIGN TEMPLATE */
 @theme {
-  --color-primary-black: #000000;
-  --color-primary-white: #FFFFFF;
-  --color-primary-red: #B3231E;
-  --color-primary-grey: #C9C9C9;
+  --color-primary-grey: #747474;
 
-  --font-sans: 'Poppins', sans-serif;
+  --font-sans: 'Helvetica Neue', sans-serif;
 
-  --font-size-header: 40px;
-  --font-size-subheader: 32px;
-  --font-size-accent: 18px;
-  --font-size-body: 16px;
+  --font-size-header: 196px;
+  --font-size-accent: 50px;
+  --font-size-body: 24px;
 
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  --font-weight-regular: 200;
+  --font-weight-accent: 300;
+  --font-weight-bold: 700;
+
+  --font-style-accent: italic;
 }
