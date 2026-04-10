@@ -2,14 +2,6 @@ import Hero from "../components/Hero"
 export default function Landing() {
     return (
         <section className="mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-8 font-sans text-black md:px-10 lg:px-16 lg:py-10">
-            <div className="flex flex-col gap-6">
-                <h1 className="max-w-5xl text-[clamp(4.5rem,13vw,10rem)] font-[var(--font-weight-bold)] leading-[0.88] tracking-[-0.07em] text-black">
-                    kunsthalaarhus
-                </h1>
-                <p className="text-[1.05rem] leading-[1.2] text-[var(--color-primary-grey)] lg:w-1/2 lg:self-end lg:text-right">
-                    Kunsthal Aarhus is an inclusive exhibition space that aims to communicate clearly, enthusiastically, and engagingly to a broad audience, sparking curiosity about contemporary art.
-                </p>
-            </div>
             <div className="pt-4 text-[length:var(--font-size-body)]">
                 <Hero />
             </div>
